@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Axel – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v1.4">
+  <script>
+    // Applique le thème choisi avant l'affichage (évite un flash)
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+<main>
+  <nav>
+    <b>Axel</b>
+    <button class="toggle" id="theme" aria-label="Changer de thème">◐ Thème</button>
+  </nav>
+  <header class="hero">
+    <div>
+      <p class="kicker">Développeur · Game dev débutant</p>
+      <h1>Salut, moi c’est <span>Axel</span>.</h1>
+      <p class="lead">Étudiant en BTS SIO, je me forme au développement web et au jeu vidéo. Voici mon premier jeu 2D, réalisé de A à Z avec Unity.</p>
+      <a class="btn" href="#a-propos">a propos de moi</a> 
+      <br>
+      <a class="btn" href="#jeu">Jouer</a><a class="btn ghost" href="#difficultes">Voir comment je l’ai fait</a>
+    </div>
+    <svg class="ship" viewBox="0 0 200 240" role="img" aria-label="Vaisseau spatial">
+      <path d="M100 10 C140 60 150 130 140 170 L60 170 C50 130 60 60 100 10Z" fill="#e8eaff" stroke="#141a33" stroke-width="5"/>
+      <circle cx="100" cy="88" r="20" fill="#6aa6ff" stroke="#141a33" stroke-width="5"/>
+      <path d="M60 140 L20 195 L62 175Z M140 140 L180 195 L138 175Z" fill="#e8503a" stroke="#141a33" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M82 178 Q100 235 118 178Z" fill="#ffd166" stroke="#141a33" stroke-width="5" stroke-linejoin="round"/>
+    </svg>
+  </header>
+
+  <section id="a-propos">
+    <p class="kicker">00 · a propos de moi</p>
+    <h2>une presentation breve</h2>
+          <div class="card">
+        <span class="tag">Général</span>
+        <h3>Qui suis-je ?</h3>
+        <p>Axel Marcq, étudiant en BTS SIO au lycée André Malraux. Passionné d’informatique, je voudrais devenir développeur de jeux vidéo. J’aime les petites choses du quotidien, les personnes qui m’entourent, et je suis plutôt tranquille : j’apprécie aussi mes moments à moi.</p>
+      </div>
+          <div class="card">
+        <span class="tag">État d’esprit</span>
+        <h3>Ce que j’aime dans le développement</h3>
+        <p>C’est un domaine très vaste où il y a toujours quelque chose à apprendre, que ce soit une nouvelle technologie ou une nouvelle façon de développer.</p>
+      </div>
+          <div class="card">
+        <span class="tag">Formation</span>
+        <h3>Parcours</h3>
+        <p>Brevet, bac pro CIEL (2022-2025), puis BTS SIO en cours (2025-2027).</p>
+      </div>
+      </section>
+
+  <section id="xp">
+    <p class="kicker">B1 · experience profesionnel</p>
+    <h2>travaux réaliser</h2>
+          <div class="card">
+        <span class="tag">Stage · 2026</span>
+        <h3>Phone House Concept, Lens</h3>
+        <p>Création d’un site avec base de données : vitrine, backend, design et analyse, en collaboration avec mon tuteur de stage.</p>
+                <img src="image/site-phone-house.png" alt="" loading="lazy">
+              </div>
+          <div class="card">
+        <span class="tag">Stage · 2024</span>
+        <h3>Phone House Concept, Lens</h3>
+        <p>Réparation de smartphones et d’un ordinateur portable en atelier.</p>
+                <img src="image/reparation.jpg" alt="" loading="lazy">
+              </div>
+          <div class="card">
+        <span class="tag">Stage · 2023</span>
+        <h3>Sonolens Sonorisation, Lens</h3>
+        <p>Câblage d’enceintes et d’une table de mixage, réparation d’une machine à fumée.</p>
+              </div>
+          <div class="card">
+        <span class="tag">Stage</span>
+        <h3>Initiative solidaire, Lens</h3>
+        <p>Réparation mécanique : moteur, triangles de suspension, feux de croisement et roues.</p>
+              </div>
+      </section>
+
+  <section id="jeu">
+    <p class="kicker">01 · Le jeu</p>
+    <h2>space-survivors</h2>
+    <p>Un survival spatial 2D, mon premier projet sur Unity.</p>
+    
+<p><a class="btn" href="https://play.unity.com/en/games/75a68580-f375-4758-bf03-506ff117cbfc/axel-space-entrainement" target="_blank" rel="noopener">Ouvrir sur Unity Play</a></p>
+    <div class="meta">
+              <div><small>MOTEUR</small>Unity 2D · C#</div>
+              <div><small>DURÉE</small>3 à 4 semaines</div>
+              <div><small>PLATEFORME</small>Web (WebGL)</div>
+              <div><small>COMMANDES</small>Peu, voire pas de commandes</div>
+          </div>
+  </section>
+
+  <section id="role">
+    <p class="kicker">02 · Mon rôle</p>
+    <h2>Ce que j’ai fait moi-même</h2>
+    <div class="card"><p>Programmation du vaisseau, des ennemis et obstacles, et des collisions. Les assets (sprites, sons, effets) sont faits par moi, d’après une formation Unity Learn pour apprendre à coder un jeu 2D sur Unity.</p></div>
+  </section>
+
+  <section id="difficultes">
+    <p class="kicker">03 · Les difficultés</p>
+    <h2>Ce qui m’a fait progresser</h2>
+          <div class="card">
+        <span class="tag">Animation &amp; états</span>
+        <h3>Comprendre les machines à états</h3>
+        <p>J’ai étudié le Gamekit2D pour comprendre comment un personnage passe d’un état à un autre avec l’Animator et les StateMachineBehaviour. Grâce à cela, j’ai pu réaliser un deuxième projet qui me sert de modèle et de base pour mes futurs projets de jeux vidéo : il me permet d’animer un personnage, ou encore de mettre une musique d’ambiance et des bruitages d’animations et de mouvements.</p>
+      </div>
+          <div class="card">
+        <span class="tag">Publication</span>
+        <h3>Du build éditeur au build web</h3>
+        <p>Un jeu qui marche dans l’éditeur n’est pas forcément prêt pour le web. En effet, j’ai eu beaucoup de mal à l’intégrer dans ce portfolio, car un problème de compression m’empêchait de le faire tourner n’importe où. Heureusement, la solution a été trouvée grâce à Unity Play, car c’est la configuration recommandée dans la documentation de Unity pour faire tourner un jeu web.</p>
+      </div>
+      </section>
+
+  <section id="processus">
+    <p class="kicker">04 · Le processus</p>
+    <h2>Du prototype au jeu publié</h2>
+    <div class="steps">
+              <div>
+          <b>V0</b>
+          <br>Premier prototype : un carré qui bouge.          <br> <img src="image/prototype.png">
+        </div>
+              <div>
+          <b>V1</b>
+          <br>Ajout du vaisseau que l’on contrôle.          <br> <img src="image/v1.png">
+        </div>
+              <div>
+          <b>V2</b>
+          <br>Version à compléter avant de la publier sur Unity Play.          <br> <img src="image/v2.png">
+        </div>
+              <div>
+          <b>Suite</b>
+          <br>Préparation d’un nouveau jeu.          <br> <img src="image/sprite2.png">
+        </div>
+          </div>
+  </section>
+
+  <section id="prototype">
+    <p class="kicker">05 · Prochain projet</p>
+    <h2>Un prototype en préparation</h2>
+    <p>Un deuxième jeu, encore au stade du dessin : [nom du prototype, genre, idée en une phrase].</p>
+    <div class="proto-grid">
+              <figure class="shot wide">
+          <img src="image/croquis-carte.jpg" alt="Croquis au crayon de la carte du jeu" loading="lazy">
+          <figcaption>Croquis de la carte du jeu.</figcaption>
+        </figure>
+              <figure class="shot sprite">
+          <img src="image/sprite1.png" alt="Sprite du personnage principal à écharpe orange" loading="lazy">
+          <figcaption>Sprite, variante 1. [légende]</figcaption>
+        </figure>
+              <figure class="shot sprite">
+          <img src="image/sprite2.png" alt="Sprite du personnage avec cheveux bruns et écharpe orange" loading="lazy">
+          <figcaption>Sprite, variante 2. [légende]</figcaption>
+        </figure>
+              <figure class="shot sprite">
+          <img src="image/croquis.jpg" alt="Croquis au crayon d’un monstre du jeu" loading="lazy">
+          <figcaption>Croquis d’un monstre du jeu. [apparence et mécanique]</figcaption>
+        </figure>
+              <figure class="shot wide">
+          <img src="image/croquis-debut-jeu.jpg" alt="Croquis au crayon du début du jeu" loading="lazy">
+          <figcaption>Croquis de la zone de début de jeu.</figcaption>
+        </figure>
+              <figure class="shot wide">
+          <img src="image/croquis-inventaire.jpg" alt="Croquis au crayon de l’apparence de l’inventaire" loading="lazy">
+          <figcaption>Croquis de l’inventaire.</figcaption>
+        </figure>
+              <figure class="shot wide">
+          <img src="image/croquis-monstre1.jpg" alt="Croquis au crayon d’un monstre du jeu" loading="lazy">
+          <figcaption>Croquis d’un monstre du jeu. [apparence et mécanique]</figcaption>
+        </figure>
+              <figure class="shot wide">
+          <img src="image/croquis-monstre2.jpg" alt="Croquis au crayon d’un monstre du jeu" loading="lazy">
+          <figcaption>Croquis d’un monstre du jeu. [apparence et mécanique]</figcaption>
+        </figure>
+              <figure class="shot wide">
+          <img src="image/croquis-boss1.jpg" alt="Croquis au crayon d’un boss du jeu" loading="lazy">
+          <figcaption>Croquis d’un boss du jeu. [apparence]</figcaption>
+        </figure>
+                </div>
+  </section>
+  <footer>
+    <p class="kicker">06 · Contact</p>
+    <p>Un retour, une idée, une collab ?
+      <a href="mailto:axelmarcq29@gmail.com">axelmarcq29@gmail.com</a> ·
+      <a href="https://github.com/axelmarcq29-jpg" target="_blank" rel="noopener">GitHub</a>  ·
+      <a href="www.linkedin.com/in/axel-marcq-3ab8953a9" target="_blank" rel="noopener">linkedin</a></p>
+  </footer>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
