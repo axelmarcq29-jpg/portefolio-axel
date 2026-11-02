@@ -1,0 +1,17 @@
+
+
+<Files "*.js.br">
+  AddType text/javascript .br
+  AddEncoding br .br
+  RemoveLanguage .br
+</Files>
+<Files "*.data.br">
+  AddType application/octet-stream .br
+  AddEncoding br .br
+  RemoveLanguage .br
+</Files>
+<Files "*.wasm.br">
+  AddType application/wasm .br
+  AddEncoding br .br
+  RemoveLanguage .br
+</Files>

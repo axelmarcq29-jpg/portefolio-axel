@@ -1,0 +1,78 @@
+/* Portfolio Axel – feuille de style unique */
+:root{
+  --bg:#f3f5fb;--panel:#ffffff;--ink:#141a33;--muted:#55608a;--line:#d5dbef;
+  --accent:#e8503a;--accent2:#1b6ee0;--star:#141a33;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0b1024;--panel:#141b3d;--ink:#9b9b9b;--muted:#9aa5d6;--line:#28316a;--accent:#ff7a59;--accent2:#6aa6ff;--star:#ffffff}
+}
+:root[data-theme="dark"]{--bg:#0b1024;--panel:#141b3d;--ink:#eef1ff;--muted:#9aa5d6;--line:#28316a;--accent:#ff7a59;--accent2:#6aa6ff;--star:#ffffff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.6;
+  background-image:radial-gradient(var(--star) 1px,transparent 1.5px),radial-gradient(var(--star) 1px,transparent 1.5px);
+  background-size:140px 140px,90px 90px;background-position:0 0,45px 60px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.93;z-index:-1}
+main{max-width:860px;margin:0 auto;padding:0 22px}
+code,.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav b{font-size:20px}
+.toggle{font:inherit;font-size:15px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+
+.hero{display:grid;gap:28px;grid-template-columns:1.3fr 1fr;align-items:center;padding:56px 0 40px}
+.hero h1{font-size:clamp(40px,8vw,72px);line-height:1.05;letter-spacing:-.02em}
+.hero h1 span{color:var(--accent)}
+.lead{color:var(--muted);margin:18px 0 26px;max-width:34ch}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:10px}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);margin-left:8px}
+.ship{width:100%;max-width:260px;justify-self:center;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px) rotate(3deg)}}
+@media (max-width:640px){.hero{grid-template-columns:1fr}.ship{max-width:150px;order:-1;justify-self:start}.btn.ghost{margin:10px 0 0}}
+
+section{padding:48px 0 8px}
+h2{font-size:28px;margin-bottom:6px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent2);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+.screen{background:#05081a;border:1px solid var(--line);border-radius:14px;aspect-ratio:16/9;display:grid;place-items:center;text-align:center;color:#cfd6ff;padding:20px;margin-top:20px}
+.screen p{max-width:36ch;margin:10px auto 18px;font-size:16px}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:20px}
+.meta div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.meta small{display:block;color:var(--muted);font-size:13px;font-family:'JetBrains Mono',monospace}
+.card{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:18px 20px;margin-top:16px}
+.card h3{font-size:19px;margin-bottom:4px}
+.card p{color:var(--muted)}
+.card .tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent2)}
+.todo{color:var(--accent);font-style:italic}
+.steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:16px}
+.steps div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.steps b{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:14px}
+footer{padding:56px 0 64px;color:var(--muted)}
+footer a{color:var(--accent2)}
+@media (prefers-reduced-motion:reduce){.ship{animation:none}html{scroll-behavior:auto}}
+
+.proto-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:18px}
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;margin:0}
+.shot img{display:block;width:100%;height:230px;object-fit:contain;border-radius:8px;background:#f1efe6}
+.shot.sprite img{background:repeating-conic-gradient(#e9ebf5 0 25%,#fff 0 50%) 0 0/16px 16px}
+.shot figcaption{font-size:15px;color:var(--muted);padding:10px 4px 2px}
+.shot.empty{display:grid;place-items:center;min-height:290px;border-style:dashed;color:var(--muted);text-align:center;font-family:'JetBrains Mono',monospace;font-size:14px}
+.shot.wide{grid-column:span 2}
+@media (max-width:520px){.shot.wide{grid-column:auto}}
+img{max-width:100%}
+.jeu-cadre{
+  aspect-ratio: 16/10;
+  width:min(1100px,96vw);
+  position:relative; 
+  left:50%;
+  transform:translateX(-50%);
+  margin-top:20px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#05081a;
+}
+.jeu-cadre iframe{
+  width:100%;
+  height:95%;
+  border:0;
+  display:block}
